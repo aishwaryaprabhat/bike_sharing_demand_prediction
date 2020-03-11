@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bike-pred
+  namespace: bike-pred
+  labels:
+    app: bike-pred
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bike-pred
+  template:
+    metadata:
+      labels:
+        app: bike-pred
+    spec:
+      containers:
+        - name: bike-pred
+          image: IMAGE:#BUILD
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 0.5
+              memory: 0.5Gi
+            limits:
+              cpu: 1
+              memory: 1Gi
+          readinessProbe:
+              httpGet:
+                path: /
+                port: 5000
+              initialDelaySeconds: 20
+              periodSeconds: 5
+          ports:
+          - containerPort: 5000
+      imagePullSecrets: 
+        - name: gcp-cred
