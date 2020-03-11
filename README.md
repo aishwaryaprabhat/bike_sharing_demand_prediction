@@ -28,3 +28,10 @@ algorithms.
 
 
 
+`docker build -t bike .`
+
+```
+heroku create kewpyp
+heroku container:push web --app bike-pred
+heroku container:release web --app bike-pred
+```
