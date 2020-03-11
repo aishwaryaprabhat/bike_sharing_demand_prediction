@@ -1,5 +1,6 @@
 # Forecasting Demand for Bike Sharing
 
+API available at: http://bike-pred.herokuapp.com/apidocs/
 
 We will tinker with a bike-sharing dataset as a way to:
 
@@ -35,3 +36,4 @@ heroku create kewpyp
 heroku container:push web --app bike-pred
 heroku container:release web --app bike-pred
 ```
+
