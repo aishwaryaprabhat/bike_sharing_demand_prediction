@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bike-pred-service
+  namespace: bike-pred
+  annotations:
+    cloud.google.com/neg: '{"ingress": true}'
+spec:
+  type: NodePort
+  ports:
+    - port: 3050
+      targetPort: 5000
+      nodePort: 31515
+  selector:
+    app: bike-pred
