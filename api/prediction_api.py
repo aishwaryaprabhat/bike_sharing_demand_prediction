@@ -2,8 +2,8 @@ import pickle
 from flask import Flask, request, jsonify
 from flasgger import Swagger
 import numpy as np
-import pandas as pd
-import redis
+import os 
+
 
 with open('../models/rf_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
@@ -11,9 +11,15 @@ with open('../models/rf_model.pkl', 'rb') as model_file:
 app = Flask(__name__)
 swagger = Swagger(app)
 
+port = int(os.environ.get("PORT", 5000))
+
+@app.route('/')
+def landing_page():
+
+  return "Go to https://bike-pred.herokuapp.com/apidocs", 200
 
 @app.route('/predict')
-def predict_iris():
+def predict_bike_demand():
 
     """Predicting Bike Demand
     ---
@@ -85,4 +91,4 @@ def predict_iris():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=port)
