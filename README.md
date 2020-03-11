@@ -23,7 +23,7 @@ algorithms.
 
 - For EDA take a look at `src/ Bike Sharing EDA.ipynb`
 - For feature engineering and model development take a look at `src/Feature Engineering & odel Development.ipynb`
-- For a simple Flask+Swagger API script take a look at `src/prediction_api.py`
+- For a simple Flask+Swagger API script take a look at `api/prediction_api.py`
 
 
 
