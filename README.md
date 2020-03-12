@@ -1,6 +1,8 @@
 # Forecasting Demand for Bike Sharing
 
-API available at: http://bike-pred.herokuapp.com/apidocs/
+![](https://cdn.dribbble.com/users/449626/screenshots/3679748/bike_sharing.gif)
+
+Prediction API available at: http://bike-pred.herokuapp.com/apidocs/
 
 We will tinker with a bike-sharing dataset as a way to:
 
