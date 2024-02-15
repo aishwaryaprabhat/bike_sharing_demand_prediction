@@ -2,7 +2,6 @@
 
 ![](https://cdn.dribbble.com/users/449626/screenshots/3679748/bike_sharing.gif)
 
-Prediction API available at: http://bike-pred.herokuapp.com/apidocs/
 
 ## Purpose of this Repository
 
